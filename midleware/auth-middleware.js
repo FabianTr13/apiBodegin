@@ -1,5 +1,5 @@
 let config = require('../config/config')
-let pg = require('../configuration/ps_connection')
+let pg = require('../config/ps_connection')
 
 module.exports.content_type = function(req, res, next) {
   if (req.get('content-type') == 'application/json') {
@@ -19,7 +19,7 @@ module.exports.api_key = function(req, res, next) {
 
 module.exports.token_validation = function(req, res, next) {
   pg.func('usuarios.ft_proc_valida_token', req.get('token')).then(data => {
-    if (data[0]['ft_middleware_token']) {
+    if (data[0]['ft_proc_valida_token']) {
       next()
     } else {
       res.status(401).send('Error de autentificacion')
