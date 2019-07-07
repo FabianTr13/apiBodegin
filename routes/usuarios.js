@@ -12,5 +12,6 @@ router.use(mdAunt.content_type)
 router.post('/validaExisteUsuario', Usuarios.validaExisteUsuario)
 router.post('/login', Usuarios.login)
 router.post('/validaToken', Usuarios.token)
+router.post('/validaCelular', Usuarios.validaCelular)
 
 module.exports = router
