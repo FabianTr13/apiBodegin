@@ -3,7 +3,7 @@
 const config = {
   app: {
     port: "3000",
-    host: "192.168.0.15",
+    host: "localhost",
     api_key: "3A6E5ADB58DD1D45170514CD6A60EA32"
   },
   db: {
