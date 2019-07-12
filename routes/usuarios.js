@@ -13,5 +13,6 @@ router.post('/validaExisteUsuario', Usuarios.validaExisteUsuario)
 router.post('/login', Usuarios.login)
 router.post('/validaToken', Usuarios.token)
 router.post('/validaCelular', Usuarios.validaCelular)
+router.post('/cambiarPassword', Usuarios.cambiarPassword)
 
 module.exports = router

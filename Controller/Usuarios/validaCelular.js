@@ -14,15 +14,19 @@ exports.validaCelular = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-
-  if (usuario[0]['ft_proc_valida_celular']) {
+  console.log(usuario);
+  if (usuario[0]) {
     //Enviamos el codigo
     let codigoEnviado = await sms.enviarSMS(req.body.celular).catch(err=>{console.log(err);})
 
     res.send({
-      codigo:codigoEnviado
+      codigo:codigoEnviado,
+      id_usuario: usuario[0].id_usuario,
+      usuario:usuario[0].usuario
     })
   }else {
-    res.send({codigo:null})
+    res.send({codigo:null,
+              id_usuario: null,
+              usuario: null})
   }
 }
