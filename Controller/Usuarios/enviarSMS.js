@@ -9,17 +9,17 @@ exports.enviarSMS = async function(p_numero) {
       url: `https://api.elasticemail.com/v2/sms/send?apikey=25cfe08a-4823-4064-8df0-ecdc742a02e6&to=%2b504${p_numero}&body=Su codigo de verificacion es: ${val}`
     }
     console.log('codigo',val);
-    resolve(val)
-    // request.post(option, (err, httpResponse, body) => {
-    //   if (!err) {
-    //     if (httpResponse.statusCode == 200) {
-    //       resolve(val);
-    //     } else {
-    //       reject(err);
-    //     }
-    //   } else {
-    //     reject(err)
-    //   }
-    // })
+    // resolve(val)
+    request.post(option, (err, httpResponse, body) => {
+      if (!err) {
+        if (httpResponse.statusCode == 200) {
+          resolve(val);
+        } else {
+          reject(err);
+        }
+      } else {
+        reject(err)
+      }
+    })
   })
 }
