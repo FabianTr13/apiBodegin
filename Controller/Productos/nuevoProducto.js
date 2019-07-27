@@ -1,7 +1,6 @@
 const pg = require('../../config/ps_connection')
 
 exports.nuevoProducto = async function(req, res, next) {
-  console.log('llege registrro');
   let producto =
     await pg.func('app.ft_mant_insert_producto',
       [
@@ -24,5 +23,5 @@ exports.nuevoProducto = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  res.send(producto)
+  res.send(producto[0])
 }
