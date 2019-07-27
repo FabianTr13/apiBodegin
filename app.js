@@ -9,6 +9,7 @@ var cors = require('cors')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/usuarios');
 var clientesRouter = require('./routes/clientes');
+var productosRouter = require('./routes/productos');
 
 var app = express();
 
@@ -34,6 +35,7 @@ var op = {
 app.use('/', cors(op), indexRouter);
 app.use('/api/usuarios', cors(op), usersRouter);
 app.use('/api/clientes', cors(op), clientesRouter);
+app.use('/api/productos', cors(op), productosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
