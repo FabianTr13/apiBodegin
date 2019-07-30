@@ -1,6 +1,10 @@
-var validaNuevoCliente = require('./validaNuevoCliente');
-var CrearCliente = require('./crearCliente');
+var insertServicio = require('./insertServicio');
+var serviciosList = require('./serviciosList');
+var updateServicio = require('./updateServicio');
+var deleteServicio = require('./deleteServicio');
 
 //Exports encabezado de funciones
-exports.validaNuevoCliente = validaNuevoCliente.validaNuevoCliente;
-exports.CrearCliente = CrearCliente.CrearCliente;
+exports.insertServicio = insertServicio.insertServicio;
+exports.serviciosList = serviciosList.serviciosList;
+exports.updateServicio = updateServicio.updateServicio;
+exports.deleteServicio = deleteServicio.deleteServicio;

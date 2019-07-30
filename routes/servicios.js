@@ -9,8 +9,10 @@ router.use(mdAunt.content_type)
 // router.use(mdAunt.token_validation)
 
 /* POST page. */
-router.post('/validaNuevoCliente', servicios.validaNuevoCliente)
-router.post('/CrearCliente', servicios.CrearCliente)
+router.post('/insertServicio', servicios.insertServicio)
+router.post('/serviciosList', servicios.serviciosList)
+router.post('/updateServicio', servicios.updateServicio)
+router.post('/deleteServicio', servicios.deleteServicio)
 
 module.exports = router
 

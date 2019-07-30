@@ -1,11 +1,10 @@
 const pg = require('../../config/ps_connection')
 
-exports.insertCategoria = async function(req, res, next) {
+exports.categoriasList = async function(req, res, next) {
   let categoria =
-    await pg.func('app.ft_proc_insert_categoria',
+    await pg.func('app.ft_proc_devuelve_categorias',
       [
-        req.body.token,
-        req.body.nombre
+        req.body.token
       ]).catch(err => {
       res.status(500).send({
         error: err,
@@ -16,5 +15,5 @@ exports.insertCategoria = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  res.send(categoria[0].ft_proc_insert_categoria)
+  res.send(categoria)
 }
