@@ -8,8 +8,7 @@ router.use(mdAunt.content_type)
 // router.use(mdAunt.token_validation)
 
 /* POST page. */
-router.post('/insertCategoria', categorias.insertCategoria)
+router.post('/insertUpdateDeleteCategoria', categorias.insertUpdateDeleteCategoria)
 router.post('/categoriasList', categorias.categoriasList)
-router.post('/updateDeleteCategoria', categorias.updateDeleteCategoria)
 
 module.exports = router

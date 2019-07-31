@@ -15,5 +15,7 @@ exports.categoriasList = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
+
+  console.log(categoria);
   res.send(categoria)
 }
