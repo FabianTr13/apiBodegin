@@ -13,6 +13,7 @@ router.post('/insertServicio', servicios.insertServicio)
 router.post('/serviciosList', servicios.serviciosList)
 router.post('/updateServicio', servicios.updateServicio)
 router.post('/deleteServicio', servicios.deleteServicio)
+router.post('/serviciosDetalle', servicios.serviciosDetalle)
 
 module.exports = router
 
