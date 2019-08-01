@@ -10,5 +10,6 @@ router.use(mdAunt.content_type)
 /* POST page. */
 router.post('/nuevoProducto', producto.nuevoProducto)
 router.post('/validaCodigoBarrasNuevo', producto.validaCodigoBarrasNuevo)
+router.post('/productosList', producto.productosList)
 
 module.exports = router
