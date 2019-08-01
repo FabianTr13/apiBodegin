@@ -14,6 +14,7 @@ router.post('/serviciosList', servicios.serviciosList)
 router.post('/updateServicio', servicios.updateServicio)
 router.post('/deleteServicio', servicios.deleteServicio)
 router.post('/serviciosDetalle', servicios.serviciosDetalle)
+router.post('/updateProductosServicios', servicios.updateProductosServicios)
 
 module.exports = router
 
