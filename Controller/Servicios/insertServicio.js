@@ -1,27 +1,20 @@
 const pg = require('../../config/ps_connection')
 
 exports.insertServicio = async function(req, res, next) {
-  console.log('llege registrro');
-  // let carrito =
-  //   await pg.func('clientes.ft_proc_registra_cliente',
-  //     [
-  //       req.body.nombre_comercial,
-  //       req.body.nombre_legal,
-  //       req.body.logo,
-  //       req.body.rtn,
-  //       req.body.direccion,
-  //       req.body.celular,
-  //       req.body.usuario,
-  //       req.body.clave
-  //     ]).catch(err => {
-  //     res.status(500).send({
-  //       error: err,
-  //       status: 500
-  //     });
-  //   })
-  //
-  // if (res.statusCode != 200) {
-  //   return
-  // }
-  res.send('carrito')
+  let servicio =
+    await pg.func('app.ft_proc_insert_servicio',
+      [
+        req.body.token,
+        req.body.nombre
+      ]).catch(err => {
+      res.status(500).send({
+        error: err,
+        status: 500
+      });
+    })
+
+  if (res.statusCode != 200) {
+    return
+  }
+  res.send(String(servicio[0].ft_proc_insert_servicio))
 }
