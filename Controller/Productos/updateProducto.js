@@ -1,10 +1,10 @@
 const pg = require('../../config/ps_connection')
 
-exports.nuevoProducto = async function(req, res, next) {
+exports.updateProducto = async function(req, res, next) {
   let producto =
-    await pg.func('app.ft_mant_insert_producto',
+    await pg.func('app.ft_proc_update_producto',
       [
-        req.body.token,
+        req.body.id_producto,
         req.body.nombre,
         req.body.descripcion,
         req.body.codigobarra,
@@ -21,5 +21,5 @@ exports.nuevoProducto = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  res.send(producto[0])
+  res.send(producto)
 }
