@@ -1,6 +1,7 @@
 const pg = require('../../config/ps_connection')
 
 exports.updateProducto = async function(req, res, next) {
+
   let producto =
     await pg.func('app.ft_proc_update_producto',
       [
@@ -9,7 +10,8 @@ exports.updateProducto = async function(req, res, next) {
         req.body.descripcion,
         req.body.codigobarra,
         req.body.id_categoria,
-        req.body.fotografia
+        req.body.fotografia,
+        req.body.token
       ]).catch(err => {
         console.log(err);
       res.status(500).send({

@@ -10,5 +10,8 @@ router.use(mdAunt.content_type)
 /* POST page. */
 router.post('/insertUpdateDeleteSucursales', sucursales.insertUpdateDeleteSucursales)
 router.post('/sucursalesList', sucursales.sucursalesList)
+router.post('/obtenerSucursalSeleccionada', sucursales.obtenerSucursalSeleccionada)
+router.post('/updateSucursalSeleccionada', sucursales.updateSucursalSeleccionada)
+router.post('/sucursalesListUsuario', sucursales.sucursalesListUsuario)
 
 module.exports = router
