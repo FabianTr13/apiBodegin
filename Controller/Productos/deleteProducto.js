@@ -4,6 +4,7 @@ exports.deleteProducto = async function(req, res, next) {
   let producto =
     await pg.func('app.ft_proc_delete_producto',
       [
+        req.body.token,
         req.body.id_producto
       ]).catch(err => {
         console.log(err);
