@@ -14,5 +14,6 @@ router.post('/login', Usuarios.login)
 router.post('/validaToken', Usuarios.token)
 router.post('/validaCelular', Usuarios.validaCelular)
 router.post('/cambiarPassword', Usuarios.cambiarPassword)
+router.post('/usuariosList', Usuarios.usuariosList)
 
 module.exports = router

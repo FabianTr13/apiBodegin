@@ -15,5 +15,6 @@ router.post('/inventarioList', producto.inventarioList)
 router.post('/getProducto', producto.getProducto)
 router.post('/updateProducto', producto.updateProducto)
 router.post('/deleteProducto', producto.deleteProducto)
+router.post('/inventarioTransacciones', producto.inventarioTransacciones)
 
 module.exports = router

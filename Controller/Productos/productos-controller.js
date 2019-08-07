@@ -5,6 +5,7 @@ var inventarioList = require('./inventarioList');
 var getProducto = require('./getProducto');
 var updateProducto = require('./updateProducto');
 var deleteProducto = require('./deleteProducto');
+var inventarioTransacciones = require('./inventarioTransacciones');
 
 //Exports encabezado de funciones
 exports.nuevoProducto = nuevoProducto.nuevoProducto;
@@ -14,3 +15,4 @@ exports.inventarioList = inventarioList.inventarioList;
 exports.getProducto = getProducto.getProducto;
 exports.updateProducto = updateProducto.updateProducto;
 exports.deleteProducto = deleteProducto.deleteProducto;
+exports.inventarioTransacciones = inventarioTransacciones.inventarioTransacciones;

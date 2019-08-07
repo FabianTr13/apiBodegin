@@ -13,5 +13,6 @@ router.post('/sucursalesList', sucursales.sucursalesList)
 router.post('/obtenerSucursalSeleccionada', sucursales.obtenerSucursalSeleccionada)
 router.post('/updateSucursalSeleccionada', sucursales.updateSucursalSeleccionada)
 router.post('/sucursalesListUsuario', sucursales.sucursalesListUsuario)
+router.post('/sucursalesInsertUsuarios', sucursales.sucursalesInsertUsuarios)
 
 module.exports = router

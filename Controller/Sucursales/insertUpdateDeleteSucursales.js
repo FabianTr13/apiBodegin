@@ -1,7 +1,7 @@
 const pg = require('../../config/ps_connection')
 
 exports.insertUpdateDeleteSucursales = async function(req, res, next) {
-  console.log(req.body);
+  // console.log(req.body);
   let sucursal =
     await pg.func('app.ft_proc_insert_update_delete_sucursal',
       [
