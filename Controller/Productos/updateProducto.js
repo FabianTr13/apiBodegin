@@ -11,7 +11,8 @@ exports.updateProducto = async function(req, res, next) {
         req.body.codigobarra,
         req.body.id_categoria,
         req.body.fotografia,
-        req.body.token
+        req.body.token,
+        req.body.id_tipo_consumo
       ]).catch(err => {
         console.log(err);
       res.status(500).send({

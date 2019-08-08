@@ -1,7 +1,7 @@
 const pg = require('../../config/ps_connection')
 
 exports.insertUpdateDeleteCategoria = async function(req, res, next) {
-  console.log(req.body);
+  
   let categoria =
     await pg.func('app.ft_proc_insert_update_delete_categoria',
       [
