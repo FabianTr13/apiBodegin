@@ -16,6 +16,6 @@ exports.categoriasList = async function(req, res, next) {
     return
   }
 
-  console.log(categoria);
+  // console.log(categoria);
   res.send(categoria)
 }

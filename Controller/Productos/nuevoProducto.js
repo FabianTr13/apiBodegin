@@ -1,7 +1,7 @@
 const pg = require('../../config/ps_connection')
 
 exports.nuevoProducto = async function(req, res, next) {
-  console.log(req.body);
+  
   let producto =
     await pg.func('app.ft_mant_insert_producto',
       [

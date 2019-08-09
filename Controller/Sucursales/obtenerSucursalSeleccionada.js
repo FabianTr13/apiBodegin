@@ -15,6 +15,6 @@ exports.obtenerSucursalSeleccionada = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  console.log(sucursales);
+  // console.log(sucursales);
   res.send(sucursales[0])
 }

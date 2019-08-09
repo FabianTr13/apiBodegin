@@ -7,6 +7,7 @@ var updateProducto = require('./updateProducto');
 var deleteProducto = require('./deleteProducto');
 var inventarioTransacciones = require('./inventarioTransacciones');
 var tiposConsumo = require('./tiposConsumo');
+var uploadImagenProductos = require('./uploadImagenProductos');
 
 //Exports encabezado de funciones
 exports.nuevoProducto = nuevoProducto.nuevoProducto;
@@ -18,3 +19,4 @@ exports.updateProducto = updateProducto.updateProducto;
 exports.deleteProducto = deleteProducto.deleteProducto;
 exports.inventarioTransacciones = inventarioTransacciones.inventarioTransacciones;
 exports.tiposConsumo = tiposConsumo.tiposConsumo;
+exports.uploadImagenProductos = uploadImagenProductos.uploadImagenProductos;

@@ -17,5 +17,7 @@ router.post('/updateProducto', producto.updateProducto)
 router.post('/deleteProducto', producto.deleteProducto)
 router.post('/inventarioTransacciones', producto.inventarioTransacciones)
 router.post('/tiposConsumo', producto.tiposConsumo)
+router.post('/upload', producto.uploadImagenProductos);
+
 
 module.exports = router
