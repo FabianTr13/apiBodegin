@@ -1,7 +1,6 @@
 const pg = require('../../config/ps_connection')
 
 exports.CrearCliente = async function(req, res, next) {
-  console.log('llege registrro');
   let carrito =
     await pg.func('clientes.ft_proc_registra_cliente',
       [
