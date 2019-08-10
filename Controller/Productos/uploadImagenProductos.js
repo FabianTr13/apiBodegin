@@ -9,8 +9,8 @@ exports.uploadImagenProductos = async function(req, res, next) {
   let filename = 'producto_'+req.body.id_producto+'.jpg'
 
   let url_imagen = await pg.func('app.ft_proc_devuelve_url_save')
-
-  image.mv(`${url_imagen}${filename}`, function(err) {
+  // console.log(url_imagen);
+  image.mv(`${url_imagen[0].ft_proc_devuelve_url_save}${filename}`, function(err) {
     if (err)
       return res.status(500).send(err);
     pg.func('app.upload_imagen_producto',[
