@@ -11,5 +11,7 @@ router.use(mdAunt.content_type)
 /* POST page. */
 router.post('/validaNuevoCliente', clientes.validaNuevoCliente)
 router.post('/CrearCliente', clientes.CrearCliente)
+router.post('/getCliente', clientes.getCliente)
+router.post('/updateCliente', clientes.updateCliente)
 
 module.exports = router
