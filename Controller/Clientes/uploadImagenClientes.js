@@ -18,8 +18,8 @@ exports.uploadImagenClientes = async function(req, res, next) {
     if (err)
       return res.status(500).send(err);
     pg.func('clientes.ft_proc_update_imagen_cliente',[
-      filename,
       req.body.id_producto
+      filename,
     ])
     res.send('File uploaded!');
   });
