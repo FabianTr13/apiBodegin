@@ -1,10 +1,11 @@
 const pg = require('../../config/ps_connection')
 
-exports.validaNuevoCliente = async function(req, res, next) {
+exports.validaUsuario = async function(req, res, next) {
   let respuesta =
-    await pg.func('clientes.ft_proc_validaor_cliente_nuevo',
+    await pg.func('clientes.ft_proc_valida_update',
       [
-        req.body.usuario
+        req.body.id_cliente,
+        req.body.usuario,
       ]).catch(err => {
       res.status(500).send({
         error: err,
@@ -15,5 +16,5 @@ exports.validaNuevoCliente = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  res.send(respuesta[0].ft_proc_validaor_cliente_nuevo)
+  res.send(respuesta[0].ft_proc_valida_update)
 }
