@@ -1,7 +1,6 @@
 const pg = require('../../config/ps_connection')
 
 exports.crearUsuario = async function(req, res, next) {
-  console.log(req.body);
   let usuario =
     await pg.func('usuarios.ft_proc_crear_usuario',
     [
