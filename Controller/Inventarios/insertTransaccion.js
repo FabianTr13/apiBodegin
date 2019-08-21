@@ -2,16 +2,15 @@ const pg = require('../../config/ps_connection')
 
 exports.insertTransaccion = async function(req, res, next) {
 
-  let producto =
-    await pg.func('app.ft_proc_update_producto',
+  let inventario =
+    await pg.func('app.ft_proc_insert_transaccion_inventario',
       [
         req.body.token,
         req.body.id_producto,
         req.body.cantidad,
         req.body.costo,
         req.body.fecha,
-        req.body.id_tipo_consumo,
-        req.body.tipoTransaccion,
+        req.body.tipo_transaccion,
         req.body.id_sucursal
       ]).catch(err => {
         console.log(err);
@@ -24,5 +23,5 @@ exports.insertTransaccion = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  res.send(producto)
+  res.send(inventario)
 }
