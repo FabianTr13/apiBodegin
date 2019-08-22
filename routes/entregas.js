@@ -9,5 +9,6 @@ router.use(mdAunt.content_type)
 
 /* POST page. */
 router.post('/getServicios', entregas.getServicios)
+router.post('/realizarEntrega', entregas.realizarEntrega)
 
 module.exports = router
