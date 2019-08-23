@@ -1,6 +1,7 @@
 const pg = require('../../config/ps_connection')
 
 exports.getUsuarioSide = async function(req, res, next) {
+  console.log('entre');
   let usuario =
     await pg.func('usuarios.ft_proc_recupera_usuario_side',
     [
@@ -16,5 +17,6 @@ exports.getUsuarioSide = async function(req, res, next) {
     return
   }
 
-  res.send(usuario[0].ft_proc_recupera_usuario_side)
+  console.log('sali', usuario);
+  res.send(usuario[0])
 }
