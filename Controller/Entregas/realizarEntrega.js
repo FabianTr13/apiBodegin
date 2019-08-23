@@ -17,5 +17,5 @@ exports.realizarEntrega = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  res.send(servicios)
+  res.send(servicios[0].ft_proc_realizar_entrega)
 }
