@@ -15,6 +15,7 @@ var serviciosRouter = require('./routes/servicios');
 var sucursalesRouter = require('./routes/sucursales');
 var inventariosRouter = require('./routes/inventarios');
 var entregasRouter = require('./routes/entregas');
+var pagosRouter = require('./routes/pagos');
 
 var app = express();
 
@@ -47,6 +48,7 @@ app.use('/api/servicios', cors(op), serviciosRouter);
 app.use('/api/sucursales', cors(op), sucursalesRouter);
 app.use('/api/inventarios', cors(op), inventariosRouter);
 app.use('/api/entregas', cors(op), entregasRouter);
+app.use('/api/pagos', cors(op), pagosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
