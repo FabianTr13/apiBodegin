@@ -1,11 +1,10 @@
 const pg = require('../../config/ps_connection')
 
-exports.insertServicio = async function(req, res, next) {
-  let servicio =
-    await pg.func('app.ft_proc_insert_servicio',
+exports.updateCosto = async function(req, res, next) {
+  let servicios =
+    await pg.func('app.ft_proc_update_costo_servicio',
       [
-        req.body.token,
-        req.body.nombre,
+        req.body.id_servicio,
         req.body.costo
       ]).catch(err => {
       res.status(500).send({
@@ -17,5 +16,5 @@ exports.insertServicio = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  res.send(String(servicio[0].ft_proc_insert_servicio))
+  res.send(servicios)
 }

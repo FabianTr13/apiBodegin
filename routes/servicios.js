@@ -16,56 +16,6 @@ router.post('/deleteServicio', servicios.deleteServicio)
 router.post('/serviciosDetalle', servicios.serviciosDetalle)
 router.post('/updateProductosServicios', servicios.updateProductosServicios)
 router.post('/updateNombre', servicios.updateNombre)
+router.post('/updateCosto', servicios.updateCosto)
 
 module.exports = router
-
-// Lunes
-// - [ ] query get categorias
-// - [ ] query get picker
-// - [ ] intalara toast
-// - [ ] Imagen to 64
-// - [ ] Guardar producto
-// - [ ] Validador de producto
-// - [ ] Redirec de producto
-//
-//
-// - [ ] Boton fav para productos nuevo o transacciones
-//
-// Martes
-// - [ ] Listado de productos
-// - [ ] delete de producto / inhabilitar
-// - [ ] router a ver producto
-//
-// Martes
-// - [ ] cargar producto
-// - [ ] validator de update
-// - [ ] historial de producto
-//
-// Lunes
-// - [ ] crear categoria
-// - [ ] Lista de categorias
-// - [ ] Delete o edit categoria
-//
-// Martes
-// - [ ] creation de servicio
-// - [ ] Lista de servicio
-// - [ ] Delete o update de servicio
-// - [ ] router a configuration del servicio
-// - [ ] agregado de productos a servicio
-//
-// Miercoles
-// - [ ] configuration de sucursales
-// - [ ] configuration de sus por usuario
-// - [ ] botón de sucursales
-//
-// Jueves
-// - [ ] Control para transacciones(agregar o quitar produtos)
-//
-//
-// - [ ] panel de servicio y cantidad de entregas
-// - [ ] configuration del perfil
-// - [ ] estadisticas
-// - [ ] reportes
-//
-// - [ ] validation de trial y pago registro
-// - [ ]

@@ -21,5 +21,6 @@ router.post('/usuariosPerfiles', Usuarios.usuariosPerfiles)
 router.post('/crearUsuario', Usuarios.crearUsuario)
 router.post('/validaUsuario', Usuarios.validaUsuario)
 router.post('/deleteUser', Usuarios.deleteUser)
+router.post('/getUsuarioSide', Usuarios.getUsuarioSide)
 
 module.exports = router
