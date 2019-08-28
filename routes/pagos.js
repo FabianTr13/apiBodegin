@@ -9,5 +9,7 @@ router.use(mdAunt.content_type)
 
 /* POST page. */
 router.post('/insertPago', pagos.insertPago)
+router.post('/getPagos', pagos.getPagos)
+router.post('/validaPago', pagos.validaPago)
 
 module.exports = router

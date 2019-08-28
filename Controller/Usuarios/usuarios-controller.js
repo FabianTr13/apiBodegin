@@ -11,6 +11,7 @@ var crearUsuario = require('./crearUsuario');
 var validaUsuario = require('./validaUsuario');
 var deleteUser = require('./deleteUser');
 var getUsuarioSide = require('./getUsuarioSide');
+var validaPerfil = require('./validaPerfil');
 
 //Exports encabezado de funciones
 exports.validaExisteUsuario = validaExisteUsuario.validaExisteUsuario;
@@ -26,3 +27,4 @@ exports.crearUsuario = crearUsuario.crearUsuario;
 exports.validaUsuario = validaUsuario.validaUsuario;
 exports.deleteUser = deleteUser.deleteUser;
 exports.getUsuarioSide = getUsuarioSide.getUsuarioSide;
+exports.validaPerfil = validaPerfil.validaPerfil;
