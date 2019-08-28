@@ -15,5 +15,6 @@ router.post('/getCliente', clientes.getCliente)
 router.post('/updateCliente', clientes.updateCliente)
 router.post('/validaUsuario', clientes.validaUsuario)
 router.post('/uploadImagenClientes', clientes.uploadImagenClientes)
+router.post('/registraIdOneSignal', clientes.registraIdOneSignal)
 
 module.exports = router

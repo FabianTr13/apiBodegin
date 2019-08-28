@@ -6,7 +6,12 @@ exports.login = async function(req, res, next) {
   token = await Token.getToken(req.body.usuario).catch((err) => {})
 
   let usuario =
-    await pg.func('usuarios.ft_proc_login',[req.body.usuario, req.body.password, token]).catch(err => {
+    await pg.func('usuarios.ft_proc_login',[
+      req.body.usuario,
+      req.body.password,
+      token,
+      req.body.id_onesignal
+    ]).catch(err => {
       res.status(500).send({
         error: err,
         status: 500
