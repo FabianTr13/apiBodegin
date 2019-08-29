@@ -9,6 +9,7 @@ router.use(mdAunt.content_type)
 
 /* POST page. */
 router.post('/insertTransaccion', inventarios.insertTransaccion)
+router.post('/getChart', inventarios.getChart)
 
 
 module.exports = router
