@@ -4,7 +4,8 @@ exports.getChart = async function(req, res, next) {
   let inventario =
     await pg.func('app.ft_proc_devuelve_estadisticas',
       [
-        req.body.token
+        req.body.token,
+        req.body.id_sucursal
       ]).catch(err => {
         console.log(err);
       res.status(500).send({
@@ -16,5 +17,6 @@ exports.getChart = async function(req, res, next) {
   if (res.statusCode != 200) {
     return
   }
-  res.send(String(inventario[0].ft_proc_devuelve_estadisticas))
+  console.log(inventario);
+  res.send(inventario[0].ft_proc_devuelve_estadisticas)
 }
