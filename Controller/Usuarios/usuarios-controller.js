@@ -12,6 +12,7 @@ var validaUsuario = require('./validaUsuario');
 var deleteUser = require('./deleteUser');
 var getUsuarioSide = require('./getUsuarioSide');
 var validaPerfil = require('./validaPerfil');
+var loginFinger = require('./loginFinger');
 
 //Exports encabezado de funciones
 exports.validaExisteUsuario = validaExisteUsuario.validaExisteUsuario;
@@ -28,3 +29,4 @@ exports.validaUsuario = validaUsuario.validaUsuario;
 exports.deleteUser = deleteUser.deleteUser;
 exports.getUsuarioSide = getUsuarioSide.getUsuarioSide;
 exports.validaPerfil = validaPerfil.validaPerfil;
+exports.loginFinger = loginFinger.loginFinger;

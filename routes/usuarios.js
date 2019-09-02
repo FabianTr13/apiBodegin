@@ -23,5 +23,6 @@ router.post('/validaUsuario', Usuarios.validaUsuario)
 router.post('/deleteUser', Usuarios.deleteUser)
 router.post('/getUsuarioSide', Usuarios.getUsuarioSide)
 router.post('/validaPerfil', Usuarios.validaPerfil)
+router.post('/loginFinger', Usuarios.loginFinger)
 
 module.exports = router
