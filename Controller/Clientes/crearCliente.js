@@ -11,7 +11,8 @@ exports.CrearCliente = async function(req, res, next) {
         req.body.direccion,
         req.body.celular,
         req.body.usuario,
-        req.body.clave
+        req.body.clave,
+        req.body.correo
       ]).catch(err => {
       res.status(500).send({
         error: err,

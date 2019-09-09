@@ -40,9 +40,9 @@ async function servinoti() {
       body: oneS,
       json: true
     };
-    // console.log(options);
+
     request(options, async (error, response, body) => {
-      // if (error) throw new Error(error);
+      console.log('Entregada');
       await pg.func('app.ft_proc_update_notificacion', [id_notificacion[i].id_notificacion])
     });
   }
@@ -51,5 +51,3 @@ async function servinoti() {
 setInterval(function() {
   servinoti()
 }, 3000);
-
-// servinoti()

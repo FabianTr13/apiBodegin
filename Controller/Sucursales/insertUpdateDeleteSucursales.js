@@ -9,7 +9,9 @@ exports.insertUpdateDeleteSucursales = async function(req, res, next) {
         req.body.id_sucursal,
         req.body.nombre,
         req.body.nombre_corto,
-        req.body.accion
+        req.body.accion,
+        req.body.direccion,
+        req.body.telefono
       ]).catch(err => {
         console.log(err);
       res.status(500).send({

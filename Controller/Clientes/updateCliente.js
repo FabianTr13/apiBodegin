@@ -10,7 +10,9 @@ exports.updateCliente = async function(req, res, next) {
         req.body.rtn,
         req.body.telefono,
         req.body.direccion,
-        req.body.usuario
+        req.body.usuario,
+        req.body.correo
+
       ]).catch(err => {
         console.log(err);
       res.status(500).send({
