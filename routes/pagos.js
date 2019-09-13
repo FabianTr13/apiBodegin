@@ -11,5 +11,6 @@ router.use(mdAunt.content_type)
 router.post('/insertPago', pagos.insertPago)
 router.post('/getPagos', pagos.getPagos)
 router.post('/validaPago', pagos.validaPago)
+router.post('/getFactura', pagos.getFactura)
 
 module.exports = router
