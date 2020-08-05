@@ -13,7 +13,7 @@
     "debug": "~2.6.9",
     "ejs": "~2.5.7",
     "express": "~4.16.1",
-    "express-fileupload": "^1.1.5",
+    "express-fileupload": "^1.1.9",
     "fetch": "^1.1.0",
     "http-errors": "~1.6.3",
     "jwt-simple": "^0.5.6",
